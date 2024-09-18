@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8"/>
+    <meta name="viewppoint" content="width=device-width, initoal-scale=1.0" />
+        <title>mass mail dispatcher </title>
+        <link rel="stylesheet" href="style.css" />
+        <script src="https://kit.fontawesome.com/64d58efce2.js"
+                crossorigin="anonymous"></script>
+    </head>
+    <body>
+        <div class="container">
+            <div class="form">
+                <div class="bulkmail-form">
+                    <div id="message-container"></div>
+                    <h1 class="title">MASS MAIL DISPATCHER</h1>
+                    <input id="csvf" type="file" name="csvFile" accept=".csv" class="btn1">
+                   
+                </div>      
+                <div class="mail-form">
+                   <span class="circle one"></span>
+                   <span class="circle two"></span>
+                   
+                   <form method="post">
+                        <h3 class="title">mail</h3>
+                        <div class="input-container">
+                            <input type="email" name="email" class="input">
+                            <label for="">Email</label>
+                            <span>Email</span>
+                        </div>
+                        <div class="input-container">
+                            <input type="text" name="subject" class="input">
+                            <label for="">subject</label>
+                            <span>subject</span>
+                        </div>
+                        <div class="input-container textarea">
+                            <textarea name="body" class="input"></textarea>
+                            <label for="">body</label>
+                            <span>body</span>
+                        </div>
+                        <input  type="submit" value="send" class="btn">
+                   </form>
+                </div>
+                
+            </div>
+        </div>
+        <div class="table">
+            <div class="validtab">
+              <table class ="table-mail" id="valid-table">
+                <thead>
+                  <tr>
+                    <th>Email Address</th>
+                    <th>Status</th>
+                  </tr>
+                </thead>
+                <tbody id="valmails"></tbody>
+              </table>
+            </div>
+            <div class="invalidtab">
+              <table id="invalid-table">
+                <thead>
+                  <tr>
+                    <th>Email Address</th>
+                    <th>Status</th>
+                  </tr>
+                </thead>
+                <tbody id="invalmails"></tbody>
+              </table>
+            </div>
+          </div>
+        <script src="https://smtpjs.com/v3/smtp.js"></script>
+    <script src="app.js"></script>
+    </body>
+
+</html>
